@@ -1,0 +1,42 @@
+.bi-lightning-charge{
+    margin-right: 1rem;
+    font-size: 1.9rem;
+}
+.sidebar{
+    width: 280px;
+    transition: 0.3s;
+}
+.small-sidebar{
+    width: 74px;
+
+}
+
+.small-sidebar .sidebar-text{
+    display: none;
+}
+.bi-lightning-charge{
+    rotate: 360deg;
+    transition: 1s;
+    margin-top: 3rem;
+}
+.small-sidebar .bi-lightning-charge::before{
+    content: "\F8C4";
+    transform: rotateY(360deg);
+    transition: 1s; 
+    margin-left: 0.55rem;
+}
+.dd{
+    width:10px;
+    left: 100px;
+    right: 10px
+}
+.bi-x-circle{
+    font-size: 8rem;
+
+
+}
+#total{
+    background: #a00d02;
+    padding: 5px 2px;
+    border-radius: 4px;
+ }
