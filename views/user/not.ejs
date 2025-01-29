@@ -262,7 +262,13 @@
                       
                     />
                   </div>
+    
 
+          <script>
+            document.getElementById("inputFullName").addEventListener("input", function () {
+              this.value = this.value.trimEnd(); // يزيل الفراغات من نهاية النص فقط
+            });
+          </script>
 
 
 
