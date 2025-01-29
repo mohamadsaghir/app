@@ -309,15 +309,22 @@
 
         <form action="/user/add.html" method="post" class="mx-0 row gx-3 gy-4 mt-3">
           <div class="col-md-6">
-            <label for="inputFull Name" class="form-label">Name Products</label>
+            <label for="inputFullName" class="form-label">Name Products</label>
             <input
               name="Name_Products"
               placeholder="Products"
               type="text"
               class="form-control"
-              id="inputFull Name"
+              id="inputFullName"
             />
           </div>
+          
+          <script>
+            document.getElementById("inputFullName").addEventListener("input", function () {
+              this.value = this.value.trimEnd(); // يزيل الفراغات من نهاية النص فقط
+            });
+          </script>
+          
 
           <div class="col-md-6">
             <label for="inputQuantity price" class="form-label"
