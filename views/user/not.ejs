@@ -252,10 +252,16 @@
                 </nav>
 
                 <form action="/edit/<%= obj._id %>?_method=PUT" method="post" class="mx-0 row gx-3 gy-4 mt-3">
-                    <div class="col-md-6">
-                        <label for="inputFull Name" class="form-label">Name Products</label>
-
-                    </div>
+                    <label for="inputFull Name" class="form-label">Name Products</label>
+                    <input
+                      value="<%= obj.Name_Products %>"
+                      name="Name_Products"
+                      type="text"
+                      class="form-control"
+                      id="inputFull Name"
+                      
+                    />
+                  </div>
 
 
 
@@ -278,7 +284,7 @@
                     <div class="col-md-2">
                         <label for="inputAddress2" class="form-label">Total: </label>
                         <input name="total" type="text" class="form-control" id="inputAddress2" value="<%= obj.total %>"
-                            readonly>
+                           >
                     </div>
 
 
