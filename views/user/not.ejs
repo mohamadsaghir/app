@@ -250,9 +250,10 @@
                         <li class="breadcrumb-item active" aria-current="page">Note Customers</li>
                     </ol>
                 </nav>
-
+               
                 <form action="/edit/<%= obj._id %>?_method=PUT" method="post" class="mx-0 row gx-3 gy-4 mt-3">
                     <label for="inputFull Name" class="form-label">Name Products</label>
+                    <div class="col-md-2">
                     <input
                       value="<%= obj.Name_Products %>"
                       name="Name_Products"
@@ -262,13 +263,12 @@
                       
                     />
                   </div>
-    
+                  <script>
+                    document.getElementById("inputFullName").addEventListener("input", function () {
+                      this.value = this.value.trimEnd(); // يزيل الفراغات من نهاية النص فقط
+                    });
+                  </script>
 
-          <script>
-            document.getElementById("inputFullName").addEventListener("input", function () {
-              this.value = this.value.trimEnd(); // يزيل الفراغات من نهاية النص فقط
-            });
-          </script>
 
 
 
@@ -289,8 +289,8 @@
 
                     <div class="col-md-2">
                         <label for="inputAddress2" class="form-label">Total: </label>
-                        <input name="total" type="number" class="form-control" id="inputAddress2" value="<%= obj.total %>"
-                           >
+                        <input name="total" type="text" class="form-control" id="inputAddress2" value="<%= obj.total %>"
+                            readonly>
                     </div>
 
 
